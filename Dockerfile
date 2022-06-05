@@ -19,7 +19,7 @@ RUN apt update && apt install -y wget && \
 
 WORKDIR /app
 COPY src/ ./src
-RUN cd src/cpp/build && cmake ../ && make -j
+RUN mkdir src/cpp/build && cd src/cpp/build && cmake ../ && make -j
 
 FROM ubuntu:20.04
 
